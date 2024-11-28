@@ -1,0 +1,69 @@
+/**************************************Styles for Animations***************************************/
+ body, html {
+  overflow-x: hidden;
+  /* this code is to remove scrolling & if we use this sticky menu is not working */
+} 
+/**************************************
+Navigation Menu
+***************************************/
+
+.navbar-brand {
+  opacity: 1;          /* Make elements invisible initially */
+  transform: scale(0.8); /* Make elements smaller initially */
+}
+.navbar-nav .nav-item {
+    opacity: 1;           /* Initially hidden */
+    transform: translateX(-200px); /* Logo and Toggler start from the left */
+  }
+  
+  .navbar-nav .nav-item {
+    opacity:1;            /* Initially hidden */
+    transform: translateY(-10px); /* Menu items start from the top */
+  
+  }
+/**************************************
+Pink Banner Content, image
+***************************************/
+#hero-heading,
+#hero-paragraph,
+#hero-button {
+  transform: translateX(-200px); /* Start slightly off-screen to the left */
+  opacity: 0; /* Hidden initially */
+  visibility: hidden; /* Prevent flickering */
+}
+#hero-image {
+  transform: translateX(120px); /* Start off-screen to the right */
+  opacity: 0; /* Hidden initially */
+  visibility: hidden; /* Prevent flickering */
+}
+/**************************************
+Headings
+***************************************/
+h3.left-heading {
+    transform: translateX(-100px); /* Start slightly off-screen to the left */
+    opacity: 0; /* Hidden initially */
+  }
+  h2 {
+    transform: scale(1);
+    opacity:1;
+  }
+/**************************************
+Images
+***************************************/ 
+  img[src='assets/images/people.PNG'] {
+    transform: translateX(100px); /* Start slightly off-screen to the right */
+    opacity: 0; /* Hidden initially */
+  }
+/**************************************
+Gallery
+***************************************/
+  .image-wrapper img,
+  .image-wrapper .caption {
+    opacity: 0; /* Hidden initially */
+    transform: translateY(50px); /* Positioned slightly below */
+  }
+/**************************************
+End
+***************************************/  
+
+  

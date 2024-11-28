@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patlolla Karthik Reddy</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet"><!-- Custom Css -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+
+    </head>
+<body id="connect-page" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="120" tabindex="0">
+  <div class="bg-mask">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="menu container">
+        <a class="navbar-brand text-white" href="index.html">
+          <img src="assets/images/logo.png" width="80" height="80" alt="Logo"> Karthik Reddy </a>
+        <!-- Breadcrumb -->
+       <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Connect</li>
+        </ol>
+    </nav>
+      </div>
+    </nav>
+      <section id="pageContent" >
+     
+        <div class="container ">
+          <h2 class="fw-bold mb-5 text-center "> Connect With Karthik</h2>
+            <div class="row">
+              <div class="col-sm-12">
+                
+                  <div id="otp-card">
+                  <div class="card-body text-center">
+                    <!-- Step 1 -->
+                    <div class="form-step active" id="step1">
+                      <img src="assets/images/icon1.png">
+                      <h5>Enter your Mobile number</h5>
+                      <p>We will send you a confirmation code</p>
+                      <div class="d-flex align-items-center mb-5">
+                        <!-- <select class="form-select w-auto me-2">
+                          <option value="+91">IN +91</option>
+                          <option value="+1">US +1</option>
+                          <option value="+44">GB +44</option>
+                        </select> -->
+                        <input type="number" class="form-control" placeholder="Phone number" required>
+                      </div>
+                      <button class="btn btn-secondary w-100" onclick="nextStep(2)">Verify</button>
+                      <small class="d-block text-center mt-3">By continuing you agree to <br><a href="#">Terms & conditions</a></small>
+                    </div>
+            
+                    <!-- Step 2 -->
+                    <div class="form-step" id="step2">
+                      <img src="assets/images/icon2.png">
+                      <h5>Enter Verification Code</h5>
+                      <p>We are automatically detecting a SMS sent to your mobile number ******1234</p>
+                      <div class="d-flex justify-content-center mb-3">
+                        <input type="text" maxlength="1" class="form-control otp-input">
+                        <input type="text" maxlength="1" class="form-control otp-input">
+                        <input type="text" maxlength="1" class="form-control otp-input">
+                        <input type="text" maxlength="1" class="form-control otp-input">
+                      </div>
+                      <p class="text-center text-muted">OTP expires in 5 mins</p>
+                      <small class="d-block text-center">Didn't receive OTP? <a href="#">Resend OTP</a></small>
+                      <button class="btn btn-secondary w-100 mt-3" onclick="nextStep(3)">Submit</button>
+                    </div>
+            
+                    <!-- Step 3 -->
+                    <div class="form-step" id="step3">
+                      <div class="text-center">
+                        <img src="assets/images/icon3.png">
+                        <h5>Successfully</h5>
+                        <p>verified your mobile number</p>
+                        <button class="btn btn-secondary w-100 mt-5" onclick="connectWithKarthik()">OK</button>
+                      </div>
+                    </div>
+                     
+                  </div>
+                </div>
+                
+                
+                <div class="connect-panel" style="display: none;">
+                  
+                  <form id="connectForm" class="left-animation noscroll">
+                    <h5>Complete Signup</h5>
+                    <div class="sign-up">
+                   
+                       <div class="mb-3">
+                          <label for="firstName" class="form-label">First Name *</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                          </div>
+                       <!-- Last Name -->
+                       <div class="mb-3">
+                          <label for="lastName" class="form-label">Last Name</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                      </div>
+                      <!-- Gender -->
+                      <div class="mb-3">
+                        <label class="form-label">Gender *</label>
+                        <div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                            <label class="form-check-label" for="other">Other</label>
+                          </div>
+                        </div>
+                      </div>
+                
+                      <!-- Date of Birth -->
+                      <div class="mb-3">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob">
+                      </div>
+                
+                      <!-- Pincode -->
+                      <div class="mb-3">
+                        <label for="pincode" class="form-label">Pincode *</label>
+                        <select class="form-select" id="pincode" required>
+                          <option value="" disabled selected>Select Pincode</option>
+                          <option value="500001">500001</option>
+                          <option value="500002">500002</option>
+                          <option value="500003">500003</option>
+                          <option value="500004">500004</option>
+                        </select>
+                      </div>
+                
+                      <!-- Assembly Constituency -->
+                      <div class="mb-3">
+                        <label for="constituency" class="form-label">Assembly Constituency *</label>
+                        <select class="form-select" id="constituency" required>
+                          <option value="" disabled selected>Select Constituency</option>
+                          <option value="Secunderabad">Secunderabad</option>
+                          <option value="Malkajgiri">Malkajgiri</option>
+                          <option value="LB Nagar">LB Nagar</option>
+                          <option value="Kukatpally">Kukatpally</option>
+                        </select>
+                      </div>
+                
+                      <!-- Submit Button -->
+                      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                   
+                    </div>
+                    </form>
+                </div>
+                
+              </div>
+              
+            </div>
+          </div>
+      
+</section>
+</div>
+<!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2024 Patlolla Karthik Reddy</p>
+    </footer>
+  <!-----Script for step by step form OTP----------->
+    <script>
+      function nextStep(step) {
+        document.querySelectorAll('.form-step').forEach(stepElement => stepElement.classList.remove('active'));
+        document.getElementById(`step${step}`).classList.add('active');
+      }
+  
+function connectWithKarthik() {
+  // Hide the success message or current form
+  document.getElementById('otp-card').style.display = 'none';
+
+  // Show the connect-panel
+  const connectPanel = document.querySelector('.connect-panel');
+  connectPanel.style.display = 'block';
+
+  // Scroll to the connect-panel for better user experience
+  connectPanel.scrollIntoView({ behavior: 'smooth' });
+}
+
+    </script>
+    <script src="js/bootstrap.bundle.min.js" ></script>   <!-- Bootstrap JS -->  
+    <script src="js/script.js"></script><!-- Custom JS -->
+    <!------Animations------->
+    <link href="css/site-animations.css" rel="stylesheet"><!--Custom Animation Css-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+   <script src="js/site-animations.js"></script>    
+    </body>
+    </html>
