@@ -24,6 +24,9 @@
     font-style: normal;
 
 }
+html, body {
+  overflow-x: hidden;
+}
 html {
   scroll-behavior: smooth;
   background-color:#F4F6F9;
